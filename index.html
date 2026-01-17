@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umar Sajid | DevOps & Full Stack Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8; /* Sky blue for DevOps/Cloud feel */
+            --accent-hover: #0ea5e9;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header / Hero */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Grid for Skills & Projects */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Timeline / Education */
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            border-left: 2px solid #334155;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent);
+            border-radius: 50%;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <h1>Umar Sajid</h1>
+        <div class="subtitle">Cloud Computing | DevOps | Full Stack Developer</div>
+        <div class="contact-info">
+            <a href="mailto:contact@umarsajid.com"><i class="fas fa-envelope"></i> Email Me</a> <a href="https://github.com/umarsajidm" target="_blank"><i class="fab fa-github"></i> github.com/umarsajidm</a>
+            <span><i class="fas fa-map-marker-alt"></i> Vienna, Austria</span>
+        </div>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p style="color: var(--text-secondary);">
+            Mechanical Engineer turned Software Engineer, currently specializing in Cloud Computing and DevOps at 42 Vienna. With a strong foundation in C/C++ and Linux, I am now focused on building scalable infrastructure using Go, Docker, Kubernetes, and Terraform. I combine analytical engineering problem-solving with modern software practices to build robust systems.
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Arsenal</h2>
+        <div class="card">
+            <div class="skills-container">
+                <span class="skill-tag">C / C++</span>
+                <span class="skill-tag">Golang</span>
+                <span class="skill-tag">Python Scripting</span>
+                <span class="skill-tag">Bash / Shell</span>
+                
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">CI/CD Pipelines</span>
+                <span class="skill-tag">Linux Administration</span>
+
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">Nginx</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Projects (42 Network)</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>ft_transcendence</h3>
+                <span class="date">Ongoing (Capstone)</span>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Full-stack SPA with Pong game, chat, and authentication. Integrating DevOps principles with containerized deployment.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Inception</h3>
+                <span class="date">System Administration</span>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Docker-based infrastructure setup. Configured Nginx, WordPress, and MariaDB in separate containers using docker-compose.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Webserv</h3>
+                <span class="date">C++ Network Programming</span>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Wrote a functional HTTP server from scratch in C++. Handles non-blocking I/O, poll(), and standard HTTP methods.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Minishell</h3>
+                <span class="date">System Programming</span>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                    Created a custom shell replicating Bash. Handled process creation, signals, and pipes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        
+        <div class="timeline-item">
+            <h3>42 Vienna</h3>
+            <span class="date">2026 - Present | Vienna, Austria</span>
+            <p style="color: var(--text-secondary);">Advanced Curriculum: Cloud Computing, AI, and DevOps.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Hive Helsinki (42 Network)</h3>
+            <span class="date">Previous | Helsinki, Finland</span>
+            <p style="color: var(--text-secondary);">Completed Common Core (Rank 03). Focus on Algorithms and Unix.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>BS Mechanical Engineering</h3>
+            <span class="date">University of Engineering and Technology (UET), Lahore</span>
+            <p style="color: var(--text-secondary);">Strong foundation in mathematics, physics, and analytical logic.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <div class="skills-container">
+            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">English (Fluent)</span>
+            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">German (Learning)</span>
+            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">Arabic (Fusha - Reading)</span>
+            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">Urdu (Native)</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Umar Sajid. Hosted on GitHub Pages.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
