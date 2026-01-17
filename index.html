@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umar Sajid | Junior Software Engineer</title>
+    <title>Muhammad Umar Sajid | Software Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -37,9 +37,10 @@
 
         /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-        .card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; height: 100%; }
+        .card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; transition: transform 0.2s; height: 100%; display: flex; flex-direction: column; }
         .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--accent); margin-bottom: 0.5rem; }
+        .card p { flex-grow: 1; }
 
         /* Tags */
         .skills-container { display: flex; flex-wrap: wrap; gap: 0.8rem; }
@@ -49,9 +50,14 @@
         .interest-tag { background-color: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; }
 
         /* Timeline */
-        .timeline-item { margin-bottom: 1.5rem; border-left: 2px solid #334155; padding-left: 1.5rem; position: relative; }
+        .timeline-item { margin-bottom: 2rem; border-left: 2px solid #334155; padding-left: 1.5rem; position: relative; }
         .timeline-item::before { content: ''; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; background-color: var(--accent); border-radius: 50%; }
-        .date { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.2rem; display: block; }
+        .timeline-header { margin-bottom: 0.5rem; }
+        .timeline-role { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); }
+        .timeline-company { color: var(--accent); font-weight: 500; }
+        .date { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem; display: block; }
+        .timeline-content ul { list-style-type: disc; margin-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem; }
+        .timeline-content li { margin-bottom: 0.3rem; }
 
         footer { text-align: center; padding: 2rem 0; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid #334155; margin-top: 4rem; }
 
@@ -63,11 +69,12 @@
 <div class="container">
     
     <header>
-        <h1>Umar Sajid</h1>
-        <div class="subtitle">Junior Software Engineer | Systems Programming</div>
+        <h1>Muhammad Umar Sajid</h1>
+        <div class="subtitle">Software Engineer | Systems Programming & Algorithms</div>
         <div class="contact-info">
-            <a href="mailto:contact@umarsajid.com"><i class="fas fa-envelope"></i> Email Me</a>
+            <a href="mailto:42.musajid@gmail.com"><i class="fas fa-envelope"></i> 42.musajid@gmail.com</a>
             <a href="https://github.com/umarsajidm" target="_blank"><i class="fab fa-github"></i> github.com/umarsajidm</a>
+            <a href="https://www.linkedin.com/in/umar-sajid" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/umar-sajid</a>
             <span><i class="fas fa-map-marker-alt"></i> Espoo, Finland </span>
         </div>
     </header>
@@ -75,36 +82,26 @@
     <section>
         <h2>About Me</h2>
         <p style="color: var(--text-secondary);">
-            I am a Junior Software Engineer with a background in Mechanical Engineering, currently mastering Low-Level Systems Programming at the Hive Helsinki (42 Network). I am specializing in C/C++ and Unix environments. I am eager to learn new technologies and actively looking for junior roles where I can learn and apply my analytical skills to grow.
+            Mechanical Engineering graduate transitioning into Software Engineering at Hive Helsinki (42 Network). Specialized in C, Linux System Programming, and Algorithms. Highly eager to learn new technologies and contribute to high-performance software teams. I bring a unique blend of engineering discipline and coding rigor, ready to tackle complex challenges in 5G/Cloud systems.
         </p>
     </section>
 
     <section>
-        <h2>Current Tech Stack</h2>
+        <h2>Technical Skills</h2>
         <div class="card">
             <div class="skills-container">
-                <span class="skill-tag">C Programming</span>
-                <span class="skill-tag">C++ (Learning)</span>
+                <span class="skill-tag">C / C++</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Golang</span>
                 <span class="skill-tag">Bash / Shell Scripting</span>
-                <span class="skill-tag">Git & GitHub</span>
                 <span class="skill-tag">Linux / Unix</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git & GitHub</span>
                 <span class="skill-tag">Makefile</span>
-                <span class="skill-tag">Algorithms & Data Structures</span>
-                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">GDB (Debugging)</span>
+                <span class="skill-tag">Concurrency (Threads/Mutex)</span>
+                <span class="skill-tag">Virtualization</span>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Future Focus & Interests</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-            While my current foundation is in systems, I am passionately following developments in these fields and aiming to specialize in them:
-        </p>
-        <div class="skills-container">
-            <span class="interest-tag">Cloud Computing</span>
-            <span class="interest-tag">DevOps Practices</span>
-            <span class="interest-tag">6G Networks</span>
-            <span class="interest-tag">Artificial Intelligence</span>
         </div>
     </section>
 
@@ -115,29 +112,62 @@
                 <h3>Minishell (Completed)</h3>
                 <span class="date">System Programming | C, Bash</span>
                 <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                    Developed a functional custom shell from scratch. Replicated Bash behavior including parsing, process creation (fork/exec), signal handling, and pipes/redirections.
+                    Built a functional shell from scratch. Parses commands, handles environment variables, and manages processes using <code>fork</code>, <code>execve</code>, and signal handling.
                 </p>
             </div>
             <div class="card">
                 <h3>Philosophers (In Progress)</h3>
                 <span class="date">Concurrency | C, Threads</span>
                 <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                    Currently solving the "Dining Philosophers" problem to master multi-threading, mutexes, and deadlock prevention.
+                    Solving the 'Dining Philosophers' problem to master concurrency. Implementing Mutexes to prevent data races and deadlocks, ensuring thread-safe memory access.
                 </p>
             </div>
             <div class="card">
-                <h3>get_next_line</h3>
-                <span class="date">Memory Management | C</span>
+                <h3>Born2BeRoot</h3>
+                <span class="date">Virtualization & SysAdmin</span>
                 <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                    Coded a function that reads a line from a file descriptor. Focused on static variables and precise buffer management to prevent memory leaks.
+                    Set up a virtualized Linux server (Debian) with strict security policies (UFW firewall, Sudo config), LVM, and encrypted partitions.
                 </p>
             </div>
             <div class="card">
-                <h3>ft_printf</h3>
-                <span class="date">Algorithms | C</span>
+                <h3>Pipex</h3>
+                <span class="date">IPC & File Descriptors | C</span>
                 <p style="font-size: 0.9rem; color: var(--text-secondary);">
-                    Recreated the standard printf library. Handled variable argument lists (va_list) and complex formatting data types.
+                    Recreated the behavior of Unix pipes (<code>|</code>) and redirection. Mastered file descriptor manipulation and inter-process communication.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Planning & Coordination Engineer</div>
+                <div class="timeline-company">Bilal Switchgear Engineering Pvt Ltd</div>
+            </div>
+            <span class="date">July 2023 - July 2024 | Lahore, Pakistan</span>
+            <div class="timeline-content">
+                <ul>
+                    <li><strong>Process Optimization:</strong> Led initiatives to enhance efficiency using data analysis, increasing production throughput.</li>
+                    <li><strong>Agile Management:</strong> Acted as a bridge between departments, organizing workflows similar to Scrum methodologies.</li>
+                    <li><strong>Quality Assurance:</strong> Handled troubleshooting and debugging of physical systems during Factory Acceptance Testing (FAT).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-header">
+                <div class="timeline-role">Production Engineer</div>
+                <div class="timeline-company">Bilal Switchgear Engineering Pvt Ltd</div>
+            </div>
+            <span class="date">July 2022 - July 2023 | Lahore, Pakistan</span>
+            <div class="timeline-content">
+                <ul>
+                    <li><strong>Data Analysis:</strong> Managed daily production data and generated QA reports to track performance metrics.</li>
+                    <li><strong>Collaboration:</strong> Coordinated with cross-functional teams to remove hindrances, ensuring continuous delivery of targets.</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -146,31 +176,47 @@
         <h2>Education</h2>
         
         <div class="timeline-item">
-            <h3>Hive Helsinki (42 Network)</h3>
-            <span class="date">Present | Helsinki, Finland</span>
-            <p style="color: var(--text-secondary);">Current Status: Rank 03 (System Programming). Learning peer-to-peer coding and software architecture.</p>
+            <div class="timeline-header">
+                <div class="timeline-role">Computer Software Engineering</div>
+                <div class="timeline-company">Hive Helsinki (42 Network)</div>
+            </div>
+            <span class="date">Jan 2025 - Present | Helsinki, Finland</span>
+            <div class="timeline-content">
+                <ul>
+                    <li>Current Status: Rank 03 (Philosophers/Concurrency).</li>
+                    <li>Peer-to-peer coding curriculum focusing on deep understanding of UNIX, C, and Algorithms.</li>
+                    <li>Upcoming: Transferring to <strong>42 Vienna</strong> for an exchange period in 2026.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="timeline-item">
-            <h3>BS Mechanical Engineering</h3>
-            <span class="date">University of Engineering and Technology (UET), Lahore</span>
-            <p style="color: var(--text-secondary);">"Relevant Coursework: Simulation & Modeling, Numerical Analysis, Engineering Mathematics."</p>
-            <p style="color: var(--text-secondary);">"Developed strong analytical thinking and project management skills applicable to software lifecycles."</p>
+            <div class="timeline-header">
+                <div class="timeline-role">BS Mechanical Engineering</div>
+                <div class="timeline-company">University of Engineering and Technology (UET)</div>
+            </div>
+            <span class="date">Sep 2018 - June 2022 | Lahore, Pakistan</span>
+            <div class="timeline-content">
+                <ul>
+                    <li>Developed strong analytical thinking and project management skills applicable to software lifecycles.</li>
+                    <li>Relevant Coursework: Simulation & Modeling, Numerical Analysis, Engineering Mathematics.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section>
-        <h2>Languages</h2>
+        <h2>Future Focus</h2>
         <div class="skills-container">
-            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">English (Fluent)</span>
-            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">Finnish (Learning)</span>
-            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">Urdu (Native)</span>
-            <span class="skill-tag" style="border-color: #94a3b8; color: #94a3b8;">Arabic (Reading)</span>
+            <span class="interest-tag">Cloud Computing</span>
+            <span class="interest-tag">DevOps Practices</span>
+            <span class="interest-tag">5G/6G Networks</span>
+            <span class="interest-tag">Artificial Intelligence</span>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Umar Sajid. Hosted on GitHub Pages.</p>
+        <p>&copy; 2026 Muhammad Umar Sajid. Hosted on GitHub Pages.</p>
     </footer>
 
 </div>
